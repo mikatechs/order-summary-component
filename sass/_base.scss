@@ -1,0 +1,52 @@
+//COLOR VARIABLES
+$color-main-bg: hsl(225, 100%, 94%);
+$color-btn-primary: hsl(245, 75%, 52%);
+$color-btn-secondary: hsl(245, 83%, 68%);
+
+$color-price-bg: hsl(225, 100%, 98%);
+$color-text-primary: hsl(224, 23%, 55%);
+$color-text-secondary: hsl(223, 47%, 23%);
+
+$bp-small: 25em;
+
+//CSS RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 10px/16px = 62.5% 1rem = 10px
+
+    @media only screen and (max-width: 30em) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: 25em) {
+        font-size: 40%;
+    }
+}
+
+body {
+    background-color: $color-main-bg;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+// HTML BODY CONTAINER WITH BACKGROUNDS
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 43%;
+
+    @media only screen and (max-width: 30em) {
+        background-image: url(../img/pattern-background-mobile.svg);
+    }
+}
